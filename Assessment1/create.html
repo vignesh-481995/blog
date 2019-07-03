@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  
+  <title>Create Blog Assignment</title>
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+  .header { 
+    background-color: #1d181826;
+    color: #000;
+    border-bottom: 3px solid #a93a3a;
+  }
+
+  .container-fluid {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  .contents {
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+.panel-primary>.panel-heading {
+    color: #fff;
+    background-color: #777;
+    border-color: #777;
+}
+.panel-primary {
+    border-color: #777;
+}
+.icon{
+    float: right;
+    font-size: 20px;
+}
+.box{
+  border: 1px solid grey;
+  padding: 34px;
+    margin: 30px;
+    border-radius: 10px;
+}
+  </style>
+</head>
+<body>
+
+<div class="container-fluid header">
+  <div class="col-md-12"><h3>Create Blog</h3></div>
+</div>
+<div class="container">
+<div class="col-md-offset-3 col-md-6 col-md-offset-3">
+  <div class="box">
+<form>
+<div class="form-group">
+<label>Title:</label>
+<input type="text" class="form-control" id="title" placeholder="Title">
+<input type="hidden" id="lid">
+</div>
+<div class="form-group">
+<label>Content:</label>
+<textarea class="form-control" rows="5" id="content" placeholder="Describtion"></textarea>
+</div>
+
+<button type="button" class="btn btn-danger" style="float: right" onclick="Back()">Back</button>
+<button type="button" class="btn btn-success add" onclick="Add()">Save</button>
+</form>
+</div>
+</div>
+</div>
+
+</body>
+</html>
+<script>
+    var url_string=window. location. href;
+    var url = new URL(url_string);
+    var c = url.searchParams.get("id");
+
+    var tbClients = localStorage.getItem("tbClients");
+    var tbClients1 = JSON.parse(tbClients);
+          if(c != null){
+
+	          var cli = JSON.parse(tbClients1[c]);
+	          document.getElementById("title").value=cli.Title;
+            document.getElementById("content").value=cli.Content;
+            document.getElementById("lid").value=c;
+	
+          }
+
+   
+	var selected_index = -1; 
+	//tbClients = JSON.parse(tbClients); 
+	if(tbClients1 == null) 
+		tbClients1 = [];
+
+    function Add(){
+      var tit =document.getElementById("title").value;
+      if(tit !=''){
+  var lid=document.getElementById("lid").value;
+  if(lid ==""){
+	var client = JSON.stringify({
+
+		Title    : document.getElementById("title").value,
+		Content  : document.getElementById("content").value
+	});
+  
+	tbClients1.push(client);
+	localStorage.setItem("tbClients", JSON.stringify(tbClients1));
+  alert('Blog Added Successfully!!!');
+  window.location.href="admin.html";
+	
+  }else{
+    var lid=document.getElementById("lid").value;
+    tbClients1[lid] = JSON.stringify({
+      Title    : document.getElementById("title").value,
+		Content  : document.getElementById("content").value
+		});//Alter the selected item on the table
+	localStorage.setItem("tbClients", JSON.stringify(tbClients1));
+  alert('Blog Updated Successfully!!!');
+	window.location.href="admin.html";
+
+  }
+      }else{
+        alert('Enter The Title !!!');
+      }
+} 
+function Back(){
+  window.location.href="admin.html";
+
+}
+</script>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  <title>Blog Assignment</title>
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    .mybtn{
+      background: #a93a3a;
+    border: 1px solid #a93a3a;
+    padding: 8px;
+    border-radius: 7px;
+    width: 95px;
+    color: #fff;
+    }
+  .header { 
+    
+    background-color: #1d181826;
+    color: #000;
+    border-bottom: 3px solid #a93a3a;
+  }
+
+  .container-fluid {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  .contents {
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.panel-primary>.panel-heading {
+    color: #fff;
+    background-color: #777;
+    border-color: #777;
+}
+.panel-primary {
+    border-color: #777;
+}
+.icon{
+    float: right;
+    font-size: 20px;
+}
+
+.titlelabel{
+  text-transform: capitalize;
+}
+i{ cursor: pointer; }
+  </style>
+</head>
+<body onload="List()">
+
+<div class="container-fluid header">
+  <div class="col-md-11"><h4>Blog Assignment</h4></div>
+<div class="col-md-1"> <a href="create.html" title="create blog"><button class="mybtn">Create</button></a></div>
+</div>
+
+<div id="contents"></div>
+
+</body>
+</html>
+<script>
+    var selected_index = -1;
+    var tbClients = localStorage.getItem("tbClients");//Retrieve the stored data
+	tbClients = JSON.parse(tbClients); //Converts string to object
+	if(tbClients == null) //If there is no data, initialize an empty array
+		tbClients = [];
+
+
+function List(){		
+	
+	for(var i in tbClients){
+		var cli = JSON.parse(tbClients[i]);
+	  
+$("#contents").append("<div class='container'>" + 
+									 "<div class='panel-group'>" +
+    "<div class='panel panel-primary' style='margin-top: 25px;'>" +
+      "<div class='panel-heading titlelabel'>"+cli.Title+" <i class='fa fa-pencil-square-o icon 'onclick='btnEdit("+i+")'  title='"+cli.Title+" Edit Blog' aria-hidden='true' alt='Edit"+i+"'>"+
+      "</i></div><div class='contents'>"+cli.Content+"</div></div></div></div>"); 
+	}
+} 
+function btnEdit(i){
+    
+    var cli = JSON.parse(tbClients[i]);
+	document.location.href = "create.html?id="+i;
+}
+
+</script>
