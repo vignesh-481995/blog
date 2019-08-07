@@ -1,0 +1,11 @@
+{
+    "artId": "",
+    "appName": "EFNAProjects",
+    "description": "EFNA Project Junior Dev",
+    "lastModified": "2019-08-07T11:59:20.619Z",
+    "artURL": "http://localhost:3000/bhive-art/",
+    "imgSourcePath": "appIcon-1565179157569.svg",
+    "version": "1.0.0",
+    "dataSource": "neutrinos-delivery-rt",
+    "createDate": "2019-08-07T11:59:20.619Z"
+}

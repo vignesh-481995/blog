@@ -1,0 +1,25 @@
+<div fxLayout="row wrap" fxFlex="100" fxLayoutAlign="center center" fxShow="true" fxHide="false">
+  <div fxLayout="column wrap" class="dashboard" fxFlex="100" fxLayoutGap="10px" fxLayoutAlign="start stretch" fxShow="true" fxHide="false">
+    <div fxLayout="column wrap" class="dashboard-header" fxLayoutAlign="start stretch" fxShow="true" fxHide="false">
+      <div class="title"> All Cases</div>
+    </div>
+    <div fxLayout="column wrap" fxLayoutAlign="start stretch" fxShow="true" fxHide="false" *ngIf="logintype">
+      <mat-tab-group headerPosition="start">
+        <mat-tab label="{{tabs}}" *ngFor="let tabs of tabsheading" [disabled]="false">
+          <div>
+            <bh-dashboardcontent></bh-dashboardcontent>
+          </div>
+        </mat-tab>
+      </mat-tab-group>
+    </div>
+    <div fxLayout="column wrap" fxLayoutAlign="start stretch" fxShow="true" fxHide="false" *ngIf="!logintype">
+      <mat-tab-group headerPosition="start">
+        <mat-tab label="{{tabs}}" *ngFor="let tabs of tabsheadingmanager" [disabled]="false">
+          <div>
+            <bh-dashboardcontent></bh-dashboardcontent>
+          </div>
+        </mat-tab>
+      </mat-tab-group>
+    </div>
+  </div>
+</div>

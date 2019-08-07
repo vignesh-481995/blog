@@ -1,0 +1,13 @@
+{
+    "appPageId": "f0619139-477c-742e-6587-63caa64bfe8a",
+    "appPageName": "ExistingInvestments",
+    "componentName": "existinginvestmentsComponent",
+    "selectorName": "bh-existinginvestments",
+    "htmlFileName": "existinginvestments.template.html",
+    "tsFileName": "existinginvestments.component.ts",
+    "bkd": {
+        "designerHtml": "",
+        "designerReference": {},
+        "ts": ""
+    }
+}

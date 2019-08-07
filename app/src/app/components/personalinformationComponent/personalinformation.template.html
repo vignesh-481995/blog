@@ -1,0 +1,421 @@
+<div fxLayout="row wrap" fxFlex="100" fxLayoutAlign="center center" fxShow="true" fxHide="false">
+  <div fxLayout="column wrap" fxFlex="50" fxLayoutAlign="start stretch" fxShow="true" fxHide="false">
+    <div fxLayout="column wrap" fxFlex="100" fxLayoutAlign="start stretch" fxShow="true" fxHide="false">
+      <div style="margin-top: 50px;"> <label class="personinfo_header">Personal Information</label></div>
+      <div style="margin-top: 30px;" class="bascics"> <label class="personinfo_header2">A. Basic Profile</label>
+        <mat-divider style="margin-top: 9px;"></mat-divider>
+      </div>
+    </div>
+    <div fxLayout="column wrap" fxFlex="100" fxLayoutAlign="start stretch" fxShow="true" fxHide="false">
+      <div class="margin_top_bottom"> <label class="pi_title">Title<label></label></label></div>
+      <div>
+        <mat-form-field class="full_width " [appearance]="&apos;outline&apos;">
+
+          <mat-select [(value)]="selected">
+
+            <mat-option *ngFor="let title of titles" [value]="title.value">
+              {{title.name}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+    </div>
+    <div fxLayout="column wrap" fxLayoutAlign="start stretch" fxShow="true" fxHide="false">
+      <div class="margin_top_bottom"> <label>Given Name *</label></div>
+      <mat-form-field [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;">
+        <input matInput required>
+
+      </mat-form-field>
+    </div>
+    <div fxLayout="column wrap" fxLayoutAlign="start stretch" fxShow="true" fxHide="false">
+      <div class="margin_top_bottom"> <label>Family Name *</label></div>
+      <mat-form-field [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;">
+        <input matInput required>
+
+      </mat-form-field>
+    </div>
+    <div fxLayout="column wrap" fxLayoutAlign="start stretch" fxShow="true" fxHide="false">
+      <div class="margin_top_bottom"> <label>Race *</label></div>
+      <div>
+        <mat-form-field class="full_width" [appearance]="&apos;outline&apos;">
+
+          <mat-select [(value)]="selected">
+
+            <mat-option *ngFor="let races of race" [value]="races.value">
+              {{races.name}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+    </div>
+    <div fxLayout="column wrap" fxLayoutAlign="start stretch" fxShow="true" fxHide="false">
+      <div class="margin_top_bottom"> <span>Preferred a Name to Display in eFP form</span>
+        <h4>Janice Chong</h4>
+      </div>
+    </div>
+    <div fxLayout="column wrap" fxLayoutAlign="start stretch" fxShow="true" fxHide="false">
+      <div class="margin_top_bottom"> <label>Gender*</label><br>
+      </div>
+      <div>
+        <mat-button-toggle-group #group="matButtonToggleGroup" multiple="false">
+          <mat-button-toggle *ngFor="let item of buttons;" [value]="item.value" style="width:50%">{{item.value}}</mat-button-toggle>
+        </mat-button-toggle-group>
+      </div>
+    </div>
+    <div fxLayout="column wrap" fxLayoutAlign="start stretch" fxShow="true" fxHide="false">
+      <div class="margin_top_bottom"> <label>Date of Birth</label>
+      </div>
+      <div>
+        <mat-form-field [appearance]="&apos;outline&apos;" class="full_width">
+          <input matInput [matDatepicker]="picker" (click)="open()">
+          <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+      </div>
+    </div>
+    <div fxLayout="column wrap" fxLayoutAlign="start stretch" fxShow="true" fxHide="false">
+      <div class="margin_top_bottom"> <label>Residential Status in Singapore*</label></div>
+      <div>
+        <mat-button-toggle-group #group="matButtonToggleGroup" multiple="false">
+          <mat-button-toggle *ngFor="let item of buttons1;" [value]="item.value">{{item.value}}</mat-button-toggle>
+        </mat-button-toggle-group>
+      </div>
+    </div>
+    <div fxLayout="column wrap" fxLayoutAlign="start stretch" fxShow="true" fxHide="false">
+      <div class="margin_top_bottom"> <label>Nationality*</label></div>
+      <div>
+        <mat-form-field class="full_width" [appearance]="&apos;outline&apos;">
+
+          <mat-select [(value)]="selected">
+
+            <mat-option *ngFor="let title of nationality" [value]="title.value">
+              {{title.name}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+    </div>
+    <div fxLayout="column wrap" fxLayoutAlign="start stretch" fxShow="true" fxHide="false">
+      <div class="margin_top_bottom"> <label>Smoker?</label></div>
+      <div>
+        <mat-button-toggle-group #group="matButtonToggleGroup" multiple="false">
+          <mat-button-toggle *ngFor="let item of smoker;" [value]="item.value" style="width:50%">{{item.value}}</mat-button-toggle>
+        </mat-button-toggle-group>
+      </div>
+    </div>
+    <div fxLayout="column wrap" fxLayoutAlign="start stretch" fxShow="true" fxHide="false">
+      <div class="margin_top_bottom"> <label class="personinfo_header2">B. Personal Detail</label>
+        <br>
+        <hr>
+      </div>
+    </div>
+    <div fxLayout="column wrap" fxLayoutAlign="start stretch" fxShow="true" fxHide="false">
+      <div class="margin_top_bottom"> <label>Identification No.*</label></div>
+      <div fxLayout="row wrap" fxLayoutAlign="start stretch" fxShow="true" fxHide="false">
+        <div fxLayout="column wrap" fxFlex="35" fxLayoutAlign="start stretch" fxShow="true" fxHide="false">
+          <div>
+            <mat-form-field class="full_width" [appearance]="&apos;outline&apos;">
+
+              <mat-select [(value)]="selected">
+
+                <mat-option *ngFor="let title of qualifications " [value]="title.value">
+                  {{title.name}}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+          </div>
+        </div>
+        <div fxLayout="column wrap" fxFlex="60" fxLayoutAlign="start stretch" fxShow="true" fxHide="false" fxFlexOffset="5">
+          <mat-form-field [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;">
+            <input matInput required>
+
+          </mat-form-field>
+        </div>
+      </div>
+    </div>
+    <div fxLayout="column wrap" fxLayoutAlign="start stretch" fxShow="true" fxHide="false">
+      <div class="margin_top_bottom"> <label>Country Of Birth*</label></div>
+      <div>
+        <mat-form-field class="full_width" [appearance]="&apos;outline&apos;">
+
+          <mat-select [(value)]="selected">
+
+            <mat-option *ngFor="let title of birthCounty " [value]="title.value">
+              {{title.name}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+    </div>
+    <div fxLayout="column wrap" fxLayoutAlign="start stretch" fxShow="true" fxHide="false">
+      <div class="margin_top_bottom"> <label>Marital Status*</label></div>
+      <div>
+        <mat-form-field class="full_width" [appearance]="&apos;outline&apos;">
+
+          <mat-select [(value)]="selected">
+
+            <mat-option *ngFor="let title of maritalstatus" [value]="title.value">
+              {{title.name}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+    </div>
+    <div fxLayout="column wrap" fxLayoutAlign="start stretch" fxShow="true" fxHide="false">
+      <div class="margin_top_bottom"> <label>Highest Qualification*</label></div>
+      <div>
+        <mat-form-field class="full_width" [appearance]="&apos;outline&apos;">
+
+          <mat-select [(value)]="selected">
+
+            <mat-option *ngFor="let title of qualifications " [value]="title.value">
+              {{title.name}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+    </div>
+    <div fxLayout="column wrap" fxLayoutAlign="start stretch" fxShow="true" fxHide="false">
+      <div class="margin_top_bottom"> <label>Proficiency in Spoken and Written English?</label></div>
+      <div>
+        <mat-button-toggle-group #group="matButtonToggleGroup" multiple="false">
+          <mat-button-toggle *ngFor="let item of EnglishSpoke;" [value]="item.value">{{item.value}}</mat-button-toggle>
+        </mat-button-toggle-group>
+      </div>
+    </div>
+    <div fxLayout="column wrap" fxLayoutAlign="start stretch" fxShow="true" fxHide="false">
+      <div fxLayout="column wrap" style="margin-top: 15px;background-color: #eeeeee; height: auto;padding:20px;border-top: 5px solid green;" fxLayoutAlign="start stretch" fxShow="true" fxHide="false" [fxShow]="true" [fxHide]="false">
+        <div> <label style="font-size: 18px;color: #444444;margin-left: 10px;">Conversant in Spoken Language*</label></div>
+        <div fxLayout="row wrap" style="margin-top: 20px;" fxLayoutAlign="center stretch" fxShow="true" fxHide="false" [fxShow]="true" [fxHide]="false">
+          <div fxLayout="column wrap" class="customcheck" fxFlex="45" fxLayoutAlign="end stretch" fxShow="true" fxHide="false">
+            <mat-checkbox class="customcheckbox" required>English</mat-checkbox>
+          </div>
+          <div fxLayout="column wrap" class="customcheck" fxFlex="45" fxLayoutAlign="end stretch" fxShow="true" fxHide="false" fxFlexOffset="10">
+            <mat-checkbox class="customcheckbox" required>Malay</mat-checkbox>
+          </div>
+        </div>
+        <div fxLayout="row wrap" style="margin-top: 20px;" fxLayoutAlign="center stretch" fxShow="true" fxHide="false" [fxShow]="true" [fxHide]="false">
+          <div fxLayout="column wrap" class="customcheck" fxFlex="45" fxLayoutAlign="end stretch" fxShow="true" fxHide="false">
+            <mat-checkbox class="customcheckbox" required>English</mat-checkbox>
+          </div>
+          <div fxLayout="column wrap" class="customcheck" fxFlex="45" fxLayoutAlign="end stretch" fxShow="true" fxHide="false" fxFlexOffset="10">
+            <mat-checkbox class="customcheckbox" required>Tamil</mat-checkbox>
+          </div>
+        </div>
+        <div fxLayout="row wrap" style="margin-top: 20px;" fxLayoutAlign="center stretch" fxShow="true" fxHide="false" [fxShow]="true" [fxHide]="false">
+          <div fxLayout="column wrap" class="customcheck" fxFlex="45" fxLayoutAlign="end stretch" fxShow="true" fxHide="false">
+            <mat-checkbox class="customcheckbox" required>Others</mat-checkbox>
+          </div>
+          <div fxLayout="column wrap" fxFlex="45" fxLayoutAlign="end stretch" fxShow="true" fxHide="false" fxFlexOffset="10"></div>
+        </div>
+        <div style="margin-top:10px;"> <label style="font-size: 18px;color: #444444;margin-left: 10px;">Conversant in Spoken Language*</label></div>
+        <div fxLayout="row wrap" style="margin-top: 20px;" fxLayoutAlign="center stretch" fxShow="true" fxHide="false" [fxShow]="true" [fxHide]="false">
+          <div fxLayout="column wrap" class="customcheck" fxFlex="45" fxLayoutAlign="end stretch" fxShow="true" fxHide="false">
+            <mat-checkbox class="customcheckbox" required>English</mat-checkbox>
+          </div>
+          <div fxLayout="column wrap" class="customcheck" fxFlex="45" fxLayoutAlign="end stretch" fxShow="true" fxHide="false" fxFlexOffset="10">
+            <mat-checkbox class="customcheckbox" required>Malay</mat-checkbox>
+          </div>
+        </div>
+        <div fxLayout="row wrap" style="margin-top: 20px;" fxLayoutAlign="center stretch" fxShow="true" fxHide="false" [fxShow]="true" [fxHide]="false">
+          <div fxLayout="column wrap" class="customcheck" fxFlex="45" fxLayoutAlign="end stretch" fxShow="true" fxHide="false">
+            <mat-checkbox class="customcheckbox" required>English</mat-checkbox>
+          </div>
+          <div fxLayout="column wrap" class="customcheck" fxFlex="45" fxLayoutAlign="end stretch" fxShow="true" fxHide="false" fxFlexOffset="10">
+            <mat-checkbox class="customcheckbox" required>Tamil</mat-checkbox>
+          </div>
+        </div>
+        <div fxLayout="row wrap" style="margin-top: 20px;" fxLayoutAlign="center stretch" fxShow="true" fxHide="false" [fxShow]="true" [fxHide]="false">
+          <div fxLayout="column wrap" class="customcheck" fxFlex="45" fxLayoutAlign="end stretch" fxShow="true" fxHide="false">
+            <mat-checkbox class="customcheckbox" required>Others</mat-checkbox>
+          </div>
+          <div fxLayout="column wrap" fxFlex="45" fxLayoutAlign="end stretch" fxShow="true" fxHide="false" fxFlexOffset="10"></div>
+        </div>
+      </div>
+    </div>
+    <div fxLayout="column wrap" fxLayoutAlign="start stretch" fxShow="true" fxHide="false">
+      <div class="margin_top_bottom"> <label>Politically Exposed Person?</label></div>
+      <div>
+        <mat-button-toggle-group #group="matButtonToggleGroup" multiple="false">
+          <mat-button-toggle *ngFor="let item of EnglishSpoke;" [value]="item.value">{{item.value}}</mat-button-toggle>
+        </mat-button-toggle-group>
+      </div>
+    </div>
+    <div fxLayout="column wrap" fxLayoutAlign="start stretch" fxShow="true" fxHide="false">
+      <div class="margin_top_bottom"> <label class="personinfo_header2">C. Contact Details</label>
+        <hr>
+      </div>
+    </div>
+    <div fxLayout="column wrap" fxLayoutAlign="start stretch" fxShow="true" fxHide="false">
+      <div class="margin_top_bottom"> <label>Mobile Number*</label></div>
+      <div fxLayout="row wrap" fxLayoutAlign="start stretch" fxShow="true" fxHide="false">
+        <div fxLayout="column wrap" fxFlex="35" fxLayoutAlign="start stretch" fxShow="true" fxHide="false">
+          <div>
+            <mat-form-field class="full_width" [appearance]="&apos;outline&apos;">
+
+              <mat-select [(value)]="singaporeselected">
+
+                <mat-option *ngFor="let title of countrycodes " [value]="title.value">
+                  {{title.name}}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+          </div>
+        </div>
+        <div fxLayout="column wrap" fxFlex="60" fxLayoutAlign="start stretch" fxShow="true" fxHide="false" fxFlexOffset="5">
+          <mat-form-field [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;">
+            <input matInput required>
+
+          </mat-form-field>
+        </div>
+      </div>
+    </div>
+    <div fxLayout="column wrap" fxLayoutAlign="start stretch" fxShow="true" fxHide="false">
+      <div class="margin_top_bottom"> <label>Office Number*</label></div>
+      <div fxLayout="row wrap" fxLayoutAlign="start stretch" fxShow="true" fxHide="false">
+        <div fxLayout="column wrap" fxFlex="35" fxLayoutAlign="start stretch" fxShow="true" fxHide="false">
+          <div>
+            <mat-form-field class="full_width" [appearance]="&apos;outline&apos;">
+
+              <mat-select [(value)]="singaporeselected">
+
+                <mat-option *ngFor="let title of countrycodes " [value]="title.value">
+                  {{title.name}}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+          </div>
+        </div>
+        <div fxLayout="column wrap" fxFlex="60" fxLayoutAlign="start stretch" fxShow="true" fxHide="false" fxFlexOffset="5">
+          <mat-form-field [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;">
+            <input matInput required>
+
+          </mat-form-field>
+        </div>
+      </div>
+    </div>
+    <div fxLayout="column wrap" fxLayoutAlign="start stretch" fxShow="true" fxHide="false">
+      <div class="margin_top_bottom"> <label>Home Number*</label></div>
+      <div fxLayout="row wrap" fxLayoutAlign="start stretch" fxShow="true" fxHide="false">
+        <div fxLayout="column wrap" fxFlex="35" fxLayoutAlign="start stretch" fxShow="true" fxHide="false">
+          <div>
+            <mat-form-field class="full_width" [appearance]="&apos;outline&apos;">
+
+              <mat-select [(value)]="singaporeselected">
+
+                <mat-option *ngFor="let title of countrycodes " [value]="title.value">
+                  {{title.name}}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+          </div>
+        </div>
+        <div fxLayout="column wrap" fxFlex="60" fxLayoutAlign="start stretch" fxShow="true" fxHide="false" fxFlexOffset="5">
+          <mat-form-field [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;">
+            <input matInput required>
+
+          </mat-form-field>
+        </div>
+      </div>
+    </div>
+    <div fxLayout="column wrap" fxLayoutAlign="start stretch" fxShow="true" fxHide="false">
+      <div class="margin_top_bottom"> <label>Email*</label></div>
+      <mat-form-field [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;">
+        <input matInput required>
+
+      </mat-form-field>
+    </div>
+    <div fxLayout="column wrap" fxLayoutAlign="start stretch" fxShow="true" fxHide="false">
+      <div class="margin_top_bottom"> <label class="pi_title">Country of Residence*<label></label></label></div>
+      <div>
+        <mat-form-field class="full_width" [appearance]="&apos;outline&apos;">
+
+          <mat-select [(value)]="selected">
+
+            <mat-option *ngFor="let title of countryresidency" [value]="title.value">
+              {{title.name}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+    </div>
+    <div fxLayout="column wrap" fxLayoutAlign="start stretch" fxShow="true" fxHide="false">
+      <div class="margin_top_bottom"> <label>Post Code*</label></div>
+      <mat-form-field [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;">
+        <input matInput required>
+
+      </mat-form-field>
+    </div>
+    <div fxLayout="column wrap" fxLayoutAlign="start stretch" fxShow="true" fxHide="false">
+      <div class="margin_top_bottom"> <label>Unit Number*</label></div>
+      <mat-form-field [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;">
+        <input matInput required>
+
+      </mat-form-field>
+    </div>
+    <div fxLayout="column wrap" fxLayoutAlign="start stretch" fxShow="true" fxHide="false">
+      <div class="margin_top_bottom"> <label>Block Number</label></div>
+      <mat-form-field [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;">
+        <input matInput required>
+
+      </mat-form-field>
+    </div>
+    <div fxLayout="column wrap" fxLayoutAlign="start stretch" fxShow="true" fxHide="false">
+      <div class="margin_top_bottom"> <label>Street Name*</label></div>
+      <mat-form-field [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;">
+        <input matInput required>
+
+      </mat-form-field>
+    </div>
+    <div fxLayout="column wrap" fxLayoutAlign="start stretch" fxShow="true" fxHide="false">
+      <div class="margin_top_bottom"> <label>Building Name</label></div>
+      <mat-form-field [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;">
+        <input matInput required>
+
+      </mat-form-field>
+    </div>
+    <div fxLayout="column wrap" fxLayoutAlign="start stretch" fxShow="true" fxHide="false">
+      <div class="margin_top_bottom"> <label class="personinfo_header2">D.Employment Details</label>
+        <hr>
+      </div>
+    </div>
+    <div fxLayout="column wrap" fxLayoutAlign="start stretch" fxShow="true" fxHide="false">
+      <div class="margin_top_bottom"> <label>Employment Status</label></div>
+      <mat-form-field [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;">
+        <input matInput required>
+
+      </mat-form-field>
+    </div>
+    <div fxLayout="column wrap" fxLayoutAlign="start stretch" fxShow="true" fxHide="false">
+      <div class="margin_top_bottom"> <label>Employer</label></div>
+      <mat-form-field [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;">
+        <input matInput required>
+
+      </mat-form-field>
+    </div>
+    <div fxLayout="column wrap" fxLayoutAlign="start stretch" fxShow="true" fxHide="false">
+      <div class="margin_top_bottom"> <label>Occupation</label></div>
+      <mat-form-field [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;">
+        <input matInput required>
+
+      </mat-form-field>
+    </div>
+    <div fxLayout="column wrap" fxLayoutAlign="start stretch" fxShow="true" fxHide="false">
+      <div fxLayout="row wrap" style="background-color:#f9f9f9;" fxLayoutAlign="center center" fxShow="true" fxHide="false">
+        <div fxLayout="column wrap" fxFlex="78" fxLayoutAlign="center center" fxShow="true" fxHide="false">
+          <div>
+            <h3>Is this is a Joint fact find?</h3>
+          </div>
+        </div>
+        <div fxLayout="column wrap" fxFlex="20" fxLayoutAlign="start stretch" fxShow="true" fxHide="false"><button mat-raised-button>Add a Client</button></div>
+      </div>
+      <div fxLayout="column wrap" fxLayoutAlign="start stretch" fxShow="true" fxHide="false">
+        <div fxLayout="row wrap" class="margin_top_bottom" fxLayoutAlign="start stretch" fxShow="true" fxHide="false">
+          <div fxLayout="column wrap" fxFlex="78" fxLayoutAlign="center center" fxShow="true" fxHide="false"></div>
+          <div fxLayout="column wrap" fxFlex="20" fxLayoutAlign="start stretch" fxShow="true" fxHide="false"><button mat-raised-button color="primary">Continue</button></div>
+        </div>
+        <div fxLayout="column wrap" style="height:100px" fxLayoutAlign="start stretch" fxShow="true" fxHide="false"></div>
+      </div>
+    </div>
+  </div>
+</div>

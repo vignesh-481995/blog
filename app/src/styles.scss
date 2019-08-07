@@ -1,0 +1,192 @@
+/*Importing default angular material css theme. */
+
+@import "~@angular/material/prebuilt-themes/deeppurple-amber.css";
+@import "nDefaults.scss";
+/*Importing the Dashboard tabs Css */
+body{
+    font-family: Roboto, Helvetica, sans-serif;
+}
+.dashboard-header{
+    padding: 20px;
+    background-color: #e5edf8;
+    margin-bottom: -1px !important;
+    color:#444444;
+}
+.dashboard-header>.title{
+    font-size: 36px;
+    font-weight: bold;
+}
+mat-tab-group>mat-tab-header{
+    padding: 0 20px;
+    background-color: #e5edf8;
+}
+mat-tab-group>mat-tab-header>.mat-tab-label-container>.mat-tab-list>.mat-tab-labels>.mat-tab-label{
+    padding: 0 0px;
+    align-items: center;
+    justify-content:start;
+    text-align:start;
+    font-size: 17px;
+    font-weight: bold;
+    
+    
+}
+mat-tab-group>mat-tab-header>.mat-tab-label-container>.mat-tab-list>.mat-tab-labels>.mat-tab-label-active{
+    color:#005780;
+    
+}
+
+.mat-tab-list>mat-ink-bar{
+    width: 100px !important;
+    background-color: #005780;;
+}
+.mat-tab-group.mat-primary .mat-ink-bar{
+    background-color: #6498b0;
+}
+
+.dashboardtable{
+    padding:10px;
+}
+
+.dashboardtable>table{
+    width: 100%;
+}
+
+.dashboard-paginator>mat-paginator>div>.mat-paginator-container {
+    justify-content: flex-start;
+}
+
+.dashboardtable>table>thead>tr>th{
+    background-color: #eeeeee;
+}
+
+.dashboardtable>table>thead>tr>.mat-header-cell {
+    font-size: 15px;
+    font-weight: 700;
+    padding-left: 10px;
+}
+
+.dashboardtable>table>tbody>tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+.dashboardtable>table>tbody>tr>td>a {
+    text-decoration: underline;
+    text-decoration-color: #cccccc;
+    font-weight: bold;
+    cursor: pointer;
+    padding-right:40px;
+}
+
+.dashboardtable>table>tbody>tr>td>a>mat-icon {
+    position: relative;
+    top:4px;
+}
+
+.dashboardtable>table>tbody>tr>td.mat-column-action {
+    color: #005780;
+}
+
+.dashboardtable>table>tbody>tr>td.mat-cell {
+   display: table-cell;
+    vertical-align: middle;
+    padding:10px;
+    border-right: 1px solid rgb(225, 225, 225);
+}
+
+.dashboardtable>table>tbody>tr>td.normalwidth{
+    width:15%;
+}
+.dashboardtable>table>tbody>tr>td.fullwidth{
+    width:25%;
+}
+.search-input.mat-form-field-appearance-outline .mat-form-field-infix {
+     padding: 0em 0 0.5em 0;
+}
+
+/*Custom Paginator */
+.mat-paginator-page-size-select>div>.mat-form-field-underline{
+    background-color: white;
+}
+.mat-paginator-page-size-select>div>div>div>mat-select>.mat-select-trigger>.mat-select-value{
+    width: 50%;
+}
+mat-paginator>div>div>div>.mat-paginator-range-label {
+    margin: 0 24px 0 -15px; 
+}
+
+.dashboard-paginator>mat-paginator>div>div>div>.mat-paginator-navigation-previous,.dashboard-paginator>mat-paginator>div>div>div>.mat-paginator-navigation-next{
+    display: none;
+}
+.mat-paginator-page-size-label {
+    margin: 0 4px;
+    color: #79777c;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+/*  PersonInfo Styles */
+.person_info{
+    color: #444444;
+}
+.full_width{
+    width:100%;
+}
+.personinfo_header{ 
+    font-size:36px;
+    font-weight: bold;
+}
+.personinfo_header2{
+    font-size: 25px;
+    font-weight: bold;
+}
+.pi_title,.margin_top_bottom>label{
+    font-size: 18px;
+}
+.mat-form-field-appearance-outline .mat-form-field-infix {
+    padding: 0.5em 0 0.5em 0;
+}
+mat-button-toggle-group{
+    width:100%;
+}
+mat-button-toggle{
+    width:100%;
+
+}
+.margin_top_bottom{
+    margin-top: 23px;
+    margin-bottom: 10px;
+}
+
+.mat-form-field-type-mat-select>.mat-form-field-wrapper>.mat-form-field-flex>.mat-form-field-outline,
+mat-button-toggle>.mat-button-toggle-button{
+    background-color: #f9f9f9;
+}
+
+.customcheck{
+    background: #f9f9f9;
+    height: 50px; 
+    border-radius: 4px;
+}
+.customcheckbox{
+    margin-bottom: 11px;margin-left: 14px;
+}
+
+/*  Login Page Start */
+/*  Login Page End */
+
+/* Home Page Start */
+/* Home Page End */
+
+/* Dashboard Page Start */
+/* Dashboard Page End */
+
+/* Personal Page Start */
+/* Personal Page End */
+
+/* Department Page Start */
+/* Department Page End */
+
+/* Home Page Start */
+/* Home Page End */
+
+/* Home Page Start */
+/* Home Page End */

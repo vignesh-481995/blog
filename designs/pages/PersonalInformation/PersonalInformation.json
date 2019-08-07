@@ -1,0 +1,13 @@
+{
+    "appPageId": "60d7f3ff-af2b-98ad-8115-38423736f4c9",
+    "appPageName": "PersonalInformation",
+    "componentName": "personalinformationComponent",
+    "selectorName": "bh-personalinformation",
+    "htmlFileName": "personalinformation.template.html",
+    "tsFileName": "personalinformation.component.ts",
+    "bkd": {
+        "designerHtml": "",
+        "designerReference": {},
+        "ts": ""
+    }
+}

@@ -1,0 +1,52 @@
+{
+    "routes": [
+        {
+            "path": "Login",
+            "component": "loginComponent"
+        },
+        {
+            "path": "Home",
+            "component": "homeComponent",
+            "children": [
+                {
+                    "path": "Dashboard",
+                    "component": "dashboardComponent"
+                },
+                {
+                    "path": "PersonalInfo",
+                    "component": "personalinformationComponent"
+                },
+                {
+                    "path": "DependantsDetail",
+                    "component": "dependantsdetailComponent"
+                },
+                {
+                    "path": "ExistingInvestment",
+                    "component": "existinginvestmentsComponent"
+                },
+                {
+                    "component": "investmentriskComponent",
+                    "path": "InvestmentRisk"
+                }
+            ]
+        },
+        {
+            "path": "Dash",
+            "component": "dashboardComponent"
+        },
+        {
+            "path": "personinfos",
+            "component": "personalinformationComponent"
+        },
+        {
+            "path": "''",
+            "redirectTo": "/Login",
+            "pathMatch": "full",
+            "default": true
+        },
+        {
+            "path": "**",
+            "component": "PageNotFoundComponent"
+        }
+    ]
+}

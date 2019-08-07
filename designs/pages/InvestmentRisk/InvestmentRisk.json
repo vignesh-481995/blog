@@ -1,0 +1,13 @@
+{
+    "appPageId": "9b370bec-eb66-a150-4bd6-b4fd52c5c944",
+    "appPageName": "InvestmentRisk",
+    "componentName": "investmentriskComponent",
+    "selectorName": "bh-investmentrisk",
+    "htmlFileName": "investmentrisk.template.html",
+    "tsFileName": "investmentrisk.component.ts",
+    "bkd": {
+        "designerHtml": "",
+        "designerReference": {},
+        "ts": ""
+    }
+}

@@ -1,0 +1,13 @@
+{
+    "appPageId": "cae9c051-790d-4077-088c-4903f8bb6e28",
+    "appPageName": "DependantsDetail",
+    "componentName": "dependantsdetailComponent",
+    "selectorName": "bh-dependantsdetail",
+    "htmlFileName": "dependantsdetail.template.html",
+    "tsFileName": "dependantsdetail.component.ts",
+    "bkd": {
+        "designerHtml": "",
+        "designerReference": {},
+        "ts": ""
+    }
+}

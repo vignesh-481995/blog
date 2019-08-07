@@ -1,0 +1,13 @@
+{
+    "appPageId": "7724800f-e827-5669-b339-1706987836ef",
+    "appPageName": "Thanks",
+    "componentName": "thanksComponent",
+    "selectorName": "bh-thanks",
+    "htmlFileName": "thanks.template.html",
+    "tsFileName": "thanks.component.ts",
+    "bkd": {
+        "designerHtml": "",
+        "designerReference": {},
+        "ts": ""
+    }
+}

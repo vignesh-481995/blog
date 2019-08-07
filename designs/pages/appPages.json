@@ -1,0 +1,47 @@
+{
+    "deaa0f5c-26cd-0d6c-e41f-ddecae7e3434": {
+        "appPageName": "Login",
+        "componentName": "loginComponent",
+        "isEntry": false
+    },
+    "06f41fb4-ed3b-89dc-e850-5c18de781c77": {
+        "appPageName": "Home",
+        "componentName": "homeComponent",
+        "isEntry": false
+    },
+    "d84c2e2d-0577-6e3a-4227-1ae55a7810ce": {
+        "appPageName": "Dashboard",
+        "componentName": "dashboardComponent",
+        "isEntry": false
+    },
+    "996e0e8a-6554-2716-75e7-9677b65c29da": {
+        "appPageName": "DashboardContent",
+        "componentName": "dashboardcontentComponent",
+        "isEntry": false
+    },
+    "60d7f3ff-af2b-98ad-8115-38423736f4c9": {
+        "appPageName": "PersonalInformation",
+        "componentName": "personalinformationComponent",
+        "isEntry": false
+    },
+    "cae9c051-790d-4077-088c-4903f8bb6e28": {
+        "appPageName": "DependantsDetail",
+        "componentName": "dependantsdetailComponent",
+        "isEntry": false
+    },
+    "f0619139-477c-742e-6587-63caa64bfe8a": {
+        "appPageName": "ExistingInvestments",
+        "componentName": "existinginvestmentsComponent",
+        "isEntry": false
+    },
+    "9b370bec-eb66-a150-4bd6-b4fd52c5c944": {
+        "appPageName": "InvestmentRisk",
+        "componentName": "investmentriskComponent",
+        "isEntry": false
+    },
+    "7724800f-e827-5669-b339-1706987836ef": {
+        "appPageName": "Thanks",
+        "componentName": "thanksComponent",
+        "isEntry": false
+    }
+}
